@@ -1,0 +1,47 @@
+/ {
+	leds: leds {
+		compatible = "gpio-leds";
+		green_led_2: led_2 {
+			gpios = <&gpioa 5 GPIO_ACTIVE_HIGH>;
+			label = "User LD2";
+		};
+        led_a: led_a {
+			gpios = <&gpioa 10 GPIO_ACTIVE_HIGH>;
+			label = "Led a";
+		};
+        led_b: led_b {
+			gpios = <&gpiob 3 GPIO_ACTIVE_HIGH>;
+			label = "Led b";
+		};
+        led_c: led_c {
+			gpios = <&gpioa 1 GPIO_ACTIVE_HIGH>;
+			label = "Led c";
+		};
+        led_d: led_d {
+			gpios = <&gpioa 0 GPIO_ACTIVE_HIGH>;
+			label = "Led d";
+		};
+        led_e: led_e {
+			gpios = <&gpioa 4 GPIO_ACTIVE_HIGH>;
+			label = "Led e";
+		};
+        led_f: led_f {
+			gpios = <&gpioc 0 GPIO_ACTIVE_HIGH>;
+			label = "Led f";
+		};
+        led_g: led_g {
+			gpios = <&gpioc 1 GPIO_ACTIVE_HIGH>;
+			label = "Led g";
+		};
+	};
+
+	aliases {
+		leda = &led_a;
+		ledb = &led_b;
+		ledc = &led_c;
+		ledd = &led_d;
+		lede = &led_e;
+		ledf = &led_f;
+		ledg = &led_g;
+	};
+};
